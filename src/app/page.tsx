@@ -5,7 +5,6 @@ export default function Home() {
     <main className="min-h-screen bg-[#141414]">
       <div className="flex flex-row ml-7 pt-3">
         
-        // Sidebar
         <nav className="text-white border-r-2 border-neutral-700">
           <h1 className="text-3xl mb-20 mr-7">Instagram</h1>
           <ul>
@@ -22,9 +21,9 @@ export default function Home() {
           </ul>
         </nav>
         
-        // Stories + first post on feed
+        
         <div className="ml-10 flex flex-col">
-          // Stories
+          
           <div className="flex flex-row space-x-5">
             
             <div className="flex flex-col">
@@ -134,7 +133,6 @@ export default function Home() {
           </div>
         </div>
 
-        // Suggested accounts
         <div className="flex flex-col ml-28">
           
           <div className="flex flex-row">  
