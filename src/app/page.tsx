@@ -1,6 +1,15 @@
+'use client'
 import Image from "next/image";
+import React from 'react';
 
 export default function Home() {
+  
+  const [likes, setLikes] = React.useState(0);
+
+  function handleClick() {
+    setLikes(likes + 1);
+  }
+  
   return (
     <main className="min-h-screen bg-[#141414]">
       <div className="flex flex-row ml-7 pt-3">
@@ -131,6 +140,49 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <div className="flex flex-col mt-7">
+            <div className="flex flex-row ml-20">
+              <div>
+                <Image
+                  src="/images/uncbasketball.jpg"
+                  width={40}
+                  height={40}
+                  alt="Profile Picture"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex items-center ml-3">
+                <h1 className="text-white">uncmbb<span className="text-gray-500"> - 5m</span></h1>
+              </div>
+            </div>
+              
+            <div className="mt-3 ml-20">
+              <Image 
+                src="/images/post.png"
+                width={400}
+                height={400}
+                alt="Pre-game graphic"
+                className="rounded-xl"
+              />
+            </div>
+
+            <div className="flex flex-row space-x-3 mt-3 mb-5">
+              <div className="ml-20">
+                <Image 
+                  src="/images/heart.png"
+                  width={20}
+                  height={20}
+                  alt="Like Button"
+                  onClick={handleClick}
+                />
+              </div>
+              <div className="flex items-center text-white">
+                <p>{likes} likes</p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <div className="flex flex-col ml-28">
@@ -147,7 +199,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col ml-3 justify-center">
               <p className="text-white text-sm">kcreech_</p>
-              <p className="text-gray-600 text-xs">Kerry Creech</p>
+              <p className="text-gray-400 text-xs">Kerry Creech</p>
             </div>
             <div className="flex items-center ml-14 text-blue-800 text-sm">
               <p>Switch</p>
